@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Page Not Found | Dylan's Fencing LLC"
+  description="The page you're looking for doesn't exist."
+>
+  <div class="error-page">
+    <div class="container">
+      <div class="error-content">
+        <div class="wordmark">
+          <div class="wordmark-main">DYLAN'S</div>
+          <div class="wordmark-sub">FENCING LLC</div>
+        </div>
+        
+        <h1>Page not found</h1>
+        <p>The page you're looking for doesn't exist.</p>
+        
+        <div class="error-actions">
+          <a href="./" class="btn btn-primary">Go to home page</a>
+          <a href="tel:+12102605959" class="btn btn-secondary">Call (210) 260-5959</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 0;
+    }
+    
+    .error-content {
+      text-align: center;
+      max-width: 600px;
+    }
+    
+    .wordmark {
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+    
+    .wordmark-main {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      color: var(--color-dark);
+    }
+    
+    .wordmark-sub {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--color-charcoal);
+      margin-top: 0.25rem;
+    }
+    
+    .error-content h1 {
+      margin-bottom: 1rem;
+    }
+    
+    .error-content p {
+      font-size: 1.125rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+    }
+    
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.875rem 1.75rem;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-align: center;
+      border-radius: 2px;
+      transition: all 0.2s ease;
+    }
+    
+    .btn-primary {
+      background: var(--color-cedar);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: #9a8259;
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-dark);
+      border: 2px solid var(--color-dark);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--color-dark);
+      color: white;
+    }
+  </style>
+</BaseLayout>

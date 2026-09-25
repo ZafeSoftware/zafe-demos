@@ -1,0 +1,1048 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import heroImg from '../assets/images/hero.jpg';
+import fencePortrait from '../assets/images/fence-line-portrait.jpg';
+import fenceTree from '../assets/images/fence-tree-line.jpg';
+import fenceDusk from '../assets/images/fence-dusk.jpg';
+import fenceBackyard from '../assets/images/fence-backyard.jpg';
+import fenceBrick from '../assets/images/fence-brick-house.jpg';
+---
+
+<BaseLayout 
+  title="Dylan's Fencing LLC | Fence & Gate Contractor in San Antonio, TX"
+  description="Professional wood fences and gates built straight across San Antonio. Cedar privacy fencing, walk gates, fence staining, and more. Call (210) 260-5959 for a quote."
+  isHome={true}
+>
+  <!-- Demo Preview Bar -->
+  <div class="demo-bar">
+    <div class="container">
+      <p>Demo preview by <a href="https://zafe.dev" target="_blank" rel="noopener">Zafe</a> — a website concept for Dylan's Fencing LLC</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="./" class="wordmark">
+          <div class="wordmark-main">DYLAN'S</div>
+          <div class="wordmark-sub">FENCING LLC</div>
+        </a>
+        
+        <nav class="nav" id="nav">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#process">How it works</a>
+          <a href="#area">Service area</a>
+          <a href="#quote" class="nav-cta">Get a quote</a>
+        </nav>
+        
+        <div class="header-actions">
+          <a href="tel:+12102605959" class="phone-link">(210) 260-5959</a>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Wood fences and gates, built straight, across San Antonio.</h1>
+        <p class="hero-support">Professional cedar privacy fencing and walk gates installed with care.</p>
+        <div class="hero-actions">
+          <a href="#quote" class="btn btn-primary">Get a fence quote</a>
+          <a href="tel:+12102605959" class="btn btn-secondary">Call (210) 260-5959</a>
+        </div>
+        <p class="hero-proof">
+          <a href="https://nextdoor.com/pages/goff-fencing-san-antonio-tx/" target="_blank" rel="noopener">77 Faves from neighbors on Nextdoor</a>
+        </p>
+      </div>
+      <div class="hero-image">
+        <Image 
+          src={heroImg}
+          alt="New cedar privacy fence with walk gate across a San Antonio backyard"
+          widths={[480, 800, 1200]}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          loading="eager"
+          fetchpriority="high"
+          quality={85}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="services-grid">
+        <div class="service service-featured">
+          <div class="service-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="4" y="8" width="2" height="32" fill="currentColor"/>
+              <rect x="11" y="8" width="2" height="32" fill="currentColor"/>
+              <rect x="18" y="8" width="2" height="32" fill="currentColor"/>
+              <rect x="25" y="8" width="2" height="32" fill="currentColor"/>
+              <rect x="32" y="8" width="2" height="32" fill="currentColor"/>
+              <rect x="39" y="8" width="2" height="32" fill="currentColor"/>
+              <rect x="2" y="12" width="44" height="2" fill="currentColor"/>
+              <rect x="2" y="36" width="44" height="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Fences & Gates</h3>
+          <p>Cedar privacy fencing in side-by-side and board-on-board styles. Walk gates with sturdy steel posts. Built straight and clean.</p>
+        </div>
+        
+        <div class="service">
+          <h3>Fence Staining</h3>
+          <p>Protect and refresh your wood fence with professional staining.</p>
+        </div>
+        
+        <div class="service">
+          <h3>Decks</h3>
+          <p>Outdoor deck construction and repair for San Antonio homes.</p>
+        </div>
+        
+        <div class="service">
+          <h3>Painting</h3>
+          <p>Interior and exterior painting services.</p>
+        </div>
+        
+        <div class="service">
+          <h3>Pressure Washing</h3>
+          <p>Clean fences, decks, and exterior surfaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Gallery -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <h2>Recent Projects</h2>
+      <div class="gallery">
+        <div class="gallery-item gallery-large">
+          <Image 
+            src={fenceBackyard}
+            alt="Long fence run across a large backyard with blue sky"
+            widths={[480, 800, 1200]}
+            sizes="(max-width: 768px) 100vw, 60vw"
+            loading="lazy"
+            decoding="async"
+          />
+          <p class="gallery-caption">Long cedar privacy fence installation</p>
+        </div>
+        
+        <div class="gallery-item">
+          <Image 
+            src={fenceTree}
+            alt="New privacy fence along tree line with steel post in foreground"
+            widths={[400, 600, 800]}
+            sizes="(max-width: 768px) 100vw, 40vw"
+            loading="lazy"
+            decoding="async"
+          />
+          <p class="gallery-caption">Privacy fence along property edge</p>
+        </div>
+        
+        <div class="gallery-item">
+          <Image 
+            src={fenceBrick}
+            alt="New cedar privacy fence beside a brick house"
+            widths={[400, 600, 800]}
+            sizes="(max-width: 768px) 100vw, 40vw"
+            loading="lazy"
+            decoding="async"
+          />
+          <p class="gallery-caption">Side-by-side cedar fence installation</p>
+        </div>
+        
+        <div class="gallery-item gallery-portrait">
+          <Image 
+            src={fencePortrait}
+            alt="Fence line along a property edge"
+            widths={[400, 600]}
+            sizes="(max-width: 768px) 100vw, 30vw"
+            loading="lazy"
+            decoding="async"
+          />
+          <p class="gallery-caption">Board-on-board privacy fence</p>
+        </div>
+        
+        <div class="gallery-item gallery-small">
+          <Image 
+            src={fenceDusk}
+            alt="New fence section beside a house"
+            widths={[300, 480]}
+            sizes="(max-width: 768px) 50vw, 20vw"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section process" id="process">
+    <div class="container">
+      <h2>How it works</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Call or send the form</h3>
+          <p>Reach out by phone or fill out the quote form with your project details.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>On-site look and measurement</h3>
+          <p>We visit your property to assess the job and take measurements.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Written quote</h3>
+          <p>You receive a clear quote for the work.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Build and clean up</h3>
+          <p>We install your fence and leave the site clean.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="section area" id="area">
+    <div class="container">
+      <div class="area-grid">
+        <div class="area-content">
+          <h2>Serving San Antonio</h2>
+          <p>Dylan's Fencing LLC is based in west San Antonio and serves neighborhoods throughout the city.</p>
+          
+          <div class="area-details">
+            <div class="detail-block">
+              <h3>Location</h3>
+              <p>9626 Wolf Point<br>San Antonio, TX 78251</p>
+            </div>
+            
+            <div class="detail-block">
+              <h3>Hours</h3>
+              <table class="hours-table">
+                <tr><td>Mon–Fri</td><td>8:00 AM – 7:00 PM</td></tr>
+                <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <div class="area-map">
+          <div class="map-placeholder">
+            <svg viewBox="0 0 400 300" fill="none">
+              <rect width="400" height="300" fill="#d4d1ca"/>
+              <circle cx="200" cy="150" r="8" fill="#aa9269"/>
+              <text x="200" y="180" text-anchor="middle" font-family="var(--font-body)" font-size="14" fill="#303220">San Antonio, TX</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="section quote" id="quote">
+    <div class="container">
+      <div class="quote-layout">
+        <div class="quote-intro">
+          <h2>Get a fence quote</h2>
+          <p>Fill out the form and we'll get back to you. Or call directly:</p>
+          <a href="tel:+12102605959" class="quote-phone">(210) 260-5959</a>
+        </div>
+        
+        <form class="quote-form" id="quoteForm">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-field">
+              <label for="phone">Phone <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+          
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fenceType">Fence Type</label>
+              <select id="fenceType" name="fenceType">
+                <option value="">Select one</option>
+                <option value="privacy">Privacy fence</option>
+                <option value="gate">Gate only</option>
+                <option value="repair">Fence repair</option>
+                <option value="staining">Fence staining</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-field">
+              <label for="footage">Approx. linear footage</label>
+              <input type="text" id="footage" name="footage" placeholder="e.g., 100 ft">
+            </div>
+          </div>
+          
+          <div class="form-field">
+            <label for="address">Address or neighborhood</label>
+            <input type="text" id="address" name="address">
+          </div>
+          
+          <div class="form-field">
+            <label for="notes">Project notes</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-large">Send quote request</button>
+          
+          <div class="form-message" id="formMessage"></div>
+          
+          <noscript>
+            <p class="form-noscript">This form requires JavaScript. Please call (210) 260-5959 to request a quote.</p>
+          </noscript>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="wordmark">
+            <div class="wordmark-main">DYLAN'S</div>
+            <div class="wordmark-sub">FENCING LLC</div>
+          </div>
+          <p class="footer-tagline">We take pride in our work and prove it by offering some of the best workmanship around with prices you can't beat.</p>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><a href="tel:+12102605959">(210) 260-5959</a></p>
+          <p><a href="mailto:dylansfencing@gmail.com">dylansfencing@gmail.com</a></p>
+          <p>9626 Wolf Point<br>San Antonio, TX 78251</p>
+        </div>
+        
+        <div class="footer-hours">
+          <h4>Hours</h4>
+          <p>Mon–Fri: 8:00 AM – 7:00 PM<br>
+             Saturday: 9:00 AM – 5:00 PM<br>
+             Sunday: Closed</p>
+        </div>
+        
+        <div class="footer-social">
+          <h4>Follow</h4>
+          <p><a href="https://www.facebook.com/p/Dylans-Fencing-LLC-100093611084668/" target="_blank" rel="noopener">Facebook</a></p>
+          <p><a href="https://nextdoor.com/pages/goff-fencing-san-antonio-tx/" target="_blank" rel="noopener">Nextdoor</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-credits">Demo preview by <a href="https://zafe.dev" target="_blank" rel="noopener">Zafe</a> • Photos: Dylan's Fencing LLC (<a href="https://nextdoor.com/pages/goff-fencing-san-antonio-tx/" target="_blank" rel="noopener">Nextdoor</a>)</p>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    /* Demo Bar */
+    .demo-bar {
+      background: #303220;
+      color: #F4F1EA;
+      padding: 0.5rem 0;
+      font-size: 0.875rem;
+      text-align: center;
+    }
+    
+    .demo-bar a {
+      color: #aa9269;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    
+    .demo-bar a:hover {
+      color: #c5ab84;
+    }
+
+    /* Header */
+    .header {
+      background: #F4F1EA;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(48, 50, 32, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    
+    .wordmark {
+      display: inline-block;
+    }
+    
+    .wordmark-main {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      color: var(--color-dark);
+    }
+    
+    .wordmark-sub {
+      font-family: var(--font-display);
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--color-charcoal);
+      margin-top: 0.125rem;
+    }
+    
+    .nav {
+      display: none;
+      gap: 2rem;
+      font-family: var(--font-display);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    
+    .nav a {
+      color: var(--color-dark);
+      transition: color 0.2s;
+    }
+    
+    .nav a:hover {
+      color: var(--color-cedar);
+    }
+    
+    .nav-cta {
+      padding: 0.5rem 1rem;
+      background: var(--color-cedar);
+      color: white;
+      border-radius: 2px;
+    }
+    
+    .nav-cta:hover {
+      background: #9a8259;
+      color: white;
+    }
+    
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .phone-link {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      white-space: nowrap;
+    }
+    
+    .nav-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      padding: 0.5rem;
+      border: none;
+    }
+    
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-dark);
+      transition: all 0.3s;
+    }
+    
+    @media (min-width: 768px) {
+      .nav {
+        display: flex;
+      }
+      
+      .nav-toggle {
+        display: none;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3rem 0;
+    }
+    
+    .hero .container {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+    }
+    
+    .hero-content {
+      padding: 1rem 0;
+    }
+    
+    .hero h1 {
+      margin-bottom: 1rem;
+    }
+    
+    .hero-support {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+    }
+    
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.875rem 1.75rem;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      text-align: center;
+      border-radius: 2px;
+    }
+    
+    .btn-primary {
+      background: var(--color-cedar);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: #9a8259;
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-dark);
+      border: 2px solid var(--color-dark);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--color-dark);
+      color: white;
+    }
+    
+    .btn-large {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+    
+    .hero-proof {
+      font-size: 0.9375rem;
+      color: var(--color-text-muted);
+    }
+    
+    .hero-proof a {
+      color: var(--color-dark);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    
+    .hero-image {
+      position: relative;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+    }
+    
+    @media (min-width: 768px) {
+      .hero {
+        padding: 4rem 0;
+      }
+      
+      .hero .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero {
+        padding: 6rem 0;
+      }
+    }
+
+    /* Services */
+    .services {
+      background: white;
+    }
+    
+    .services-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    
+    .service {
+      padding: 1.5rem;
+      border-left: 2px solid var(--color-cedar);
+    }
+    
+    .service h3 {
+      margin-bottom: 0.75rem;
+    }
+    
+    .service-featured {
+      background: #fafaf8;
+      padding: 2rem;
+      border: none;
+      border-left: 4px solid var(--color-dark);
+    }
+    
+    .service-icon {
+      color: var(--color-dark);
+      margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .service-featured {
+        grid-column: 1 / -1;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .services-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+      
+      .service-featured {
+        grid-column: 1;
+        grid-row: 1 / 3;
+      }
+    }
+
+    /* Projects Gallery */
+    .projects h2 {
+      margin-bottom: 2rem;
+    }
+    
+    .gallery {
+      display: grid;
+      gap: 1rem;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .gallery-caption {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+    
+    @media (min-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 200px;
+      }
+      
+      .gallery-large {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      
+      .gallery-portrait {
+        grid-row: span 2;
+      }
+      
+      .gallery-small {
+        grid-row: span 1;
+      }
+    }
+
+    /* Process */
+    .process {
+      background: #fafaf8;
+    }
+    
+    .process h2 {
+      margin-bottom: 3rem;
+    }
+    
+    .process-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    
+    .process-step {
+      position: relative;
+      padding-left: 4rem;
+    }
+    
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-cedar);
+      border: 2px solid var(--color-cedar);
+      border-radius: 2px;
+    }
+    
+    .process-step h3 {
+      margin-bottom: 0.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .process-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* Service Area */
+    .area-grid {
+      display: grid;
+      gap: 3rem;
+    }
+    
+    .area-content h2 {
+      margin-bottom: 1rem;
+    }
+    
+    .area-content > p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    
+    .area-details {
+      display: grid;
+      gap: 2rem;
+    }
+    
+    .detail-block h3 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-charcoal);
+    }
+    
+    .hours-table {
+      font-size: 0.9375rem;
+      line-height: 1.8;
+    }
+    
+    .hours-table td:first-child {
+      padding-right: 1rem;
+      color: var(--color-text-muted);
+    }
+    
+    .map-placeholder {
+      background: #e8e6e0;
+      border-radius: 2px;
+      overflow: hidden;
+      min-height: 300px;
+    }
+    
+    .map-placeholder svg {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+    }
+    
+    @media (min-width: 768px) {
+      .area-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+      
+      .area-details {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Quote Form */
+    .quote {
+      background: white;
+    }
+    
+    .quote-layout {
+      display: grid;
+      gap: 3rem;
+    }
+    
+    .quote-intro h2 {
+      margin-bottom: 1rem;
+    }
+    
+    .quote-intro p {
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+    
+    .quote-phone {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-top: 0.5rem;
+    }
+    
+    .quote-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .form-row {
+      display: grid;
+      gap: 1.25rem;
+    }
+    
+    .form-field {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .form-field label {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: 0.5rem;
+    }
+    
+    .required {
+      color: var(--color-cedar);
+    }
+    
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      padding: 0.75rem;
+      border: 1px solid #d0d0d0;
+      border-radius: 2px;
+      background: white;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--color-dark);
+      box-shadow: 0 0 0 1px var(--color-dark);
+    }
+    
+    .form-field textarea {
+      resize: vertical;
+    }
+    
+    .form-message {
+      padding: 1rem;
+      border-radius: 2px;
+      display: none;
+    }
+    
+    .form-message.show {
+      display: block;
+    }
+    
+    .form-message.success {
+      background: #e8f5e9;
+      color: #2e7d32;
+      border: 1px solid #81c784;
+    }
+    
+    .form-noscript {
+      padding: 1rem;
+      background: #fff3e0;
+      color: #e65100;
+      border: 1px solid #ffb74d;
+      border-radius: 2px;
+      margin-top: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .quote-layout {
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+      }
+      
+      .form-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--color-dark);
+      color: #F4F1EA;
+      padding: 4rem 0 2rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .footer-brand .wordmark {
+      margin-bottom: 1rem;
+    }
+    
+    .footer-brand .wordmark-main {
+      color: #F4F1EA;
+    }
+    
+    .footer-brand .wordmark-sub {
+      color: #a0a28a;
+    }
+    
+    .footer-tagline {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: #a0a28a;
+    }
+    
+    .footer h4 {
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--color-cedar);
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #c0c2aa;
+    }
+    
+    .footer a {
+      color: #c0c2aa;
+      transition: color 0.2s;
+    }
+    
+    .footer a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(170, 146, 105, 0.2);
+    }
+    
+    .footer-credits {
+      font-size: 0.875rem;
+      color: #808268;
+      text-align: center;
+    }
+    
+    .footer-credits a {
+      color: var(--color-cedar);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 2fr repeat(3, 1fr);
+        gap: 3rem;
+      }
+    }
+  </style>
+
+  <script>
+    // Form handler
+    const form = document.getElementById('quoteForm');
+    const formMessage = document.getElementById('formMessage');
+    
+    if (form && formMessage) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        formMessage.textContent = "Thanks! This is a demo preview, so nothing was sent. To get a real quote, call Dylan's Fencing at (210) 260-5959.";
+        formMessage.className = 'form-message success show';
+        
+        form.reset();
+        
+        setTimeout(() => {
+          formMessage.classList.remove('show');
+        }, 8000);
+      });
+    }
+    
+    // Mobile nav toggle (simple implementation)
+    const navToggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('nav');
+    
+    if (navToggle && nav) {
+      navToggle.addEventListener('click', () => {
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      });
+    }
+  </script>
+</BaseLayout>
