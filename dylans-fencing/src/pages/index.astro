@@ -11,17 +11,15 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
 
 <BaseLayout 
   title="Dylan's Fencing LLC | Fence & Gate Contractor in San Antonio, TX"
-  description="Professional wood fences and gates built straight across San Antonio. Cedar privacy fencing, walk gates, fence staining, and more. Call (210) 260-5959 for a quote."
+  description="Professional wood fences and gates across San Antonio. Cedar privacy fencing, walk gates, fence staining, decks, painting, and pressure washing. Call (210) 260-5959 for a quote."
   isHome={true}
 >
-  <!-- Demo Preview Bar -->
   <div class="demo-bar">
     <div class="container">
-      <p>Demo preview by <a href="https://zafe.dev" target="_blank" rel="noopener">Zafe</a> — a website concept for Dylan's Fencing LLC</p>
+      <p><span class="demo-bar-full">Demo preview by </span><a href="https://zafe.dev" target="_blank" rel="noopener">Zafe</a><span class="demo-bar-full"> — a website concept for Dylan's Fencing LLC</span></p>
     </div>
   </div>
 
-  <!-- Header -->
   <header class="header">
     <div class="container">
       <div class="header-inner">
@@ -30,7 +28,7 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
           <div class="wordmark-sub">FENCING LLC</div>
         </a>
         
-        <nav class="nav" id="nav">
+        <nav class="nav" id="nav" aria-label="Main navigation">
           <a href="#services">Services</a>
           <a href="#projects">Projects</a>
           <a href="#process">How it works</a>
@@ -40,7 +38,7 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
         
         <div class="header-actions">
           <a href="tel:+12102605959" class="phone-link">(210) 260-5959</a>
-          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
             <span></span>
             <span></span>
             <span></span>
@@ -50,285 +48,326 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Wood fences and gates, built straight, across San Antonio.</h1>
-        <p class="hero-support">Professional cedar privacy fencing and walk gates installed with care.</p>
-        <div class="hero-actions">
-          <a href="#quote" class="btn btn-primary">Get a fence quote</a>
-          <a href="tel:+12102605959" class="btn btn-secondary">Call (210) 260-5959</a>
-        </div>
-        <p class="hero-proof">
-          <a href="https://nextdoor.com/pages/goff-fencing-san-antonio-tx/" target="_blank" rel="noopener">77 Faves from neighbors on Nextdoor</a>
-        </p>
-      </div>
-      <div class="hero-image">
-        <Image 
-          src={heroImg}
-          alt="New cedar privacy fence with walk gate across a San Antonio backyard"
-          widths={[480, 800, 1200]}
-          sizes="(max-width: 768px) 100vw, 50vw"
-          loading="eager"
-          fetchpriority="high"
-          quality={85}
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="section services" id="services">
-    <div class="container">
-      <div class="services-grid">
-        <div class="service service-featured">
-          <div class="service-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-              <rect x="4" y="8" width="2" height="32" fill="currentColor"/>
-              <rect x="11" y="8" width="2" height="32" fill="currentColor"/>
-              <rect x="18" y="8" width="2" height="32" fill="currentColor"/>
-              <rect x="25" y="8" width="2" height="32" fill="currentColor"/>
-              <rect x="32" y="8" width="2" height="32" fill="currentColor"/>
-              <rect x="39" y="8" width="2" height="32" fill="currentColor"/>
-              <rect x="2" y="12" width="44" height="2" fill="currentColor"/>
-              <rect x="2" y="36" width="44" height="2" fill="currentColor"/>
-            </svg>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Wood fences and gates, built straight, across San Antonio.</h1>
+          <p class="hero-support">Professional cedar privacy fencing and walk gates for San Antonio homes.</p>
+          <div class="hero-actions">
+            <a href="#quote" class="btn btn-primary">Get a fence quote</a>
+            <a href="tel:+12102605959" class="btn btn-secondary">Call (210) 260-5959</a>
           </div>
-          <h3>Fences & Gates</h3>
-          <p>Cedar privacy fencing in side-by-side and board-on-board styles. Walk gates with sturdy steel posts. Built straight and clean.</p>
+          <p class="hero-proof">
+            <a href="https://nextdoor.com/pages/goff-fencing-san-antonio-tx/" target="_blank" rel="noopener">77 Faves from neighbors on Nextdoor</a>
+          </p>
         </div>
-        
-        <div class="service">
-          <h3>Fence Staining</h3>
-          <p>Protect and refresh your wood fence with professional staining.</p>
-        </div>
-        
-        <div class="service">
-          <h3>Decks</h3>
-          <p>Outdoor deck construction and repair for San Antonio homes.</p>
-        </div>
-        
-        <div class="service">
-          <h3>Painting</h3>
-          <p>Interior and exterior painting services.</p>
-        </div>
-        
-        <div class="service">
-          <h3>Pressure Washing</h3>
-          <p>Clean fences, decks, and exterior surfaces.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Gallery -->
-  <section class="section projects" id="projects">
-    <div class="container">
-      <h2>Recent Projects</h2>
-      <div class="gallery">
-        <div class="gallery-item gallery-large">
-          <Image 
-            src={fenceBackyard}
-            alt="Long fence run across a large backyard with blue sky"
-            widths={[480, 800, 1200]}
-            sizes="(max-width: 768px) 100vw, 60vw"
-            loading="lazy"
-            decoding="async"
-          />
-          <p class="gallery-caption">Long cedar privacy fence installation</p>
-        </div>
-        
-        <div class="gallery-item">
-          <Image 
-            src={fenceTree}
-            alt="New privacy fence along tree line with steel post in foreground"
-            widths={[400, 600, 800]}
-            sizes="(max-width: 768px) 100vw, 40vw"
-            loading="lazy"
-            decoding="async"
-          />
-          <p class="gallery-caption">Privacy fence along property edge</p>
-        </div>
-        
-        <div class="gallery-item">
-          <Image 
-            src={fenceBrick}
-            alt="New cedar privacy fence beside a brick house"
-            widths={[400, 600, 800]}
-            sizes="(max-width: 768px) 100vw, 40vw"
-            loading="lazy"
-            decoding="async"
-          />
-          <p class="gallery-caption">Side-by-side cedar fence installation</p>
-        </div>
-        
-        <div class="gallery-item gallery-portrait">
-          <Image 
-            src={fencePortrait}
-            alt="Fence line along a property edge"
-            widths={[400, 600]}
-            sizes="(max-width: 768px) 100vw, 30vw"
-            loading="lazy"
-            decoding="async"
-          />
-          <p class="gallery-caption">Board-on-board privacy fence</p>
-        </div>
-        
-        <div class="gallery-item gallery-small">
-          <Image 
-            src={fenceDusk}
-            alt="New fence section beside a house"
-            widths={[300, 480]}
-            sizes="(max-width: 768px) 50vw, 20vw"
-            loading="lazy"
-            decoding="async"
-          />
+        <div class="hero-image">
+          <picture>
+            <source 
+              type="image/avif"
+              srcset="/_astro/hero_480.avif 480w, /_astro/hero_800.avif 800w, /_astro/hero_1200.avif 1200w"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <source 
+              type="image/webp"
+              srcset="/_astro/hero_480.webp 480w, /_astro/hero_800.webp 800w, /_astro/hero_1200.webp 1200w"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <Image 
+              src={heroImg}
+              alt="Wood privacy fence with walk gate across a San Antonio backyard"
+              widths={[480, 800, 1200]}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="eager"
+              fetchpriority="high"
+              quality={85}
+            />
+          </picture>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section process" id="process">
-    <div class="container">
-      <h2>How it works</h2>
-      <div class="process-grid">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <h3>Call or send the form</h3>
-          <p>Reach out by phone or fill out the quote form with your project details.</p>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <h3>On-site look and measurement</h3>
-          <p>We visit your property to assess the job and take measurements.</p>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <h3>Written quote</h3>
-          <p>You receive a clear quote for the work.</p>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <h3>Build and clean up</h3>
-          <p>We install your fence and leave the site clean.</p>
+      <div class="hero-divider">
+        <div class="picket-line">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Service Area -->
-  <section class="section area" id="area">
-    <div class="container">
-      <div class="area-grid">
-        <div class="area-content">
-          <h2>Serving San Antonio</h2>
-          <p>Dylan's Fencing LLC is based in west San Antonio and serves neighborhoods throughout the city.</p>
+    <section class="section services" id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="services-intro">Professional fencing and property services for San Antonio homes and businesses.</p>
+        
+        <div class="services-grid">
+          <div class="service service-featured">
+            <div class="service-content">
+              <div class="service-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect x="4" y="8" width="2" height="32" fill="currentColor"/>
+                  <rect x="11" y="8" width="2" height="32" fill="currentColor"/>
+                  <rect x="18" y="8" width="2" height="32" fill="currentColor"/>
+                  <rect x="25" y="8" width="2" height="32" fill="currentColor"/>
+                  <rect x="32" y="8" width="2" height="32" fill="currentColor"/>
+                  <rect x="39" y="8" width="2" height="32" fill="currentColor"/>
+                  <rect x="2" y="12" width="44" height="2" fill="currentColor"/>
+                  <rect x="2" y="36" width="44" height="2" fill="currentColor"/>
+                </svg>
+              </div>
+              <h3>Fences & Gates</h3>
+              <p>Cedar privacy fencing in side-by-side and board-on-board styles. Walk gates with steel posts.</p>
+            </div>
+            <div class="service-image">
+              <Image 
+                src={fenceBrick}
+                alt="Wood fence installation"
+                widths={[300, 400]}
+                sizes="300px"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
           
-          <div class="area-details">
-            <div class="detail-block">
-              <h3>Location</h3>
-              <p>9626 Wolf Point<br>San Antonio, TX 78251</p>
+          <div class="service">
+            <h3>Fence Staining</h3>
+            <p>Protect and refresh your wood fence with professional staining.</p>
+          </div>
+          
+          <div class="service">
+            <h3>Decks</h3>
+            <p>Outdoor deck construction for San Antonio homes.</p>
+          </div>
+          
+          <div class="service">
+            <h3>Painting</h3>
+            <p>Exterior painting services.</p>
+          </div>
+          
+          <div class="service">
+            <h3>Pressure Washing</h3>
+            <p>Clean fences, decks, and exterior surfaces.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2>Recent Projects</h2>
+        <div class="gallery">
+          <figure class="gallery-item gallery-large">
+            <Image 
+              src={fenceBackyard}
+              alt="Wood privacy fence, San Antonio backyard"
+              widths={[480, 800, 1200]}
+              sizes="(max-width: 768px) 100vw, 60vw"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Wood privacy fence, San Antonio backyard</figcaption>
+          </figure>
+          
+          <figure class="gallery-item gallery-portrait">
+            <Image 
+              src={fencePortrait}
+              alt="Privacy fence along property line"
+              widths={[400, 600]}
+              sizes="(max-width: 768px) 100vw, 30vw"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Privacy fence along property line</figcaption>
+          </figure>
+          
+          <figure class="gallery-item">
+            <Image 
+              src={fenceTree}
+              alt="Privacy fence installation with steel posts"
+              widths={[400, 600, 800]}
+              sizes="(max-width: 768px) 100vw, 40vw"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Privacy fence with steel posts</figcaption>
+          </figure>
+          
+          <figure class="gallery-item">
+            <Image 
+              src={fenceBrick}
+              alt="Wood fence beside brick house"
+              widths={[400, 600, 800]}
+              sizes="(max-width: 768px) 100vw, 40vw"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Wood fence installation</figcaption>
+          </figure>
+          
+          <figure class="gallery-item">
+            <Image 
+              src={heroImg}
+              alt="Privacy fence with walk gate"
+              widths={[400, 600, 800]}
+              sizes="(max-width: 768px) 100vw, 40vw"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Privacy fence with walk gate</figcaption>
+          </figure>
+          
+          <figure class="gallery-item gallery-small">
+            <Image 
+              src={fenceDusk}
+              alt="Fence installation"
+              widths={[300, 480]}
+              sizes="(max-width: 768px) 50vw, 20vw"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Fence installation</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Call or send the form</h3>
+            <p>Reach out by phone or fill out the quote form with your project details.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>On-site look and measurement</h3>
+            <p>We visit your property to assess the job and take measurements.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Written quote</h3>
+            <p>You receive a clear quote for the work.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Build and clean up</h3>
+            <p>We install your fence and leave the site clean.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section area" id="area">
+      <div class="container">
+        <div class="area-grid">
+          <div class="area-content">
+            <h2>Serving San Antonio</h2>
+            <p>Dylan's Fencing LLC is based in west San Antonio and serves neighborhoods throughout the city.</p>
+            
+            <div class="area-details">
+              <div class="detail-block">
+                <h3>Location</h3>
+                <p>9626 Wolf Point<br>San Antonio, TX 78251</p>
+              </div>
+              
+              <div class="detail-block">
+                <h3>Hours</h3>
+                <table class="hours-table">
+                  <tr><td>Mon–Fri</td><td>8:00 AM – 7:00 PM</td></tr>
+                  <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+                  <tr><td>Sunday</td><td>Closed</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          <div class="area-map">
+            <div class="location-badge">
+              <svg viewBox="0 0 200 120" fill="none">
+                <rect width="200" height="120" fill="#303220" rx="2"/>
+                <text x="100" y="45" text-anchor="middle" font-family="var(--font-display)" font-size="16" font-weight="700" fill="#c4ad84" letter-spacing="0.1em">WEST SAN ANTONIO</text>
+                <text x="100" y="75" text-anchor="middle" font-family="var(--font-display)" font-size="24" font-weight="700" fill="#F4F1EA" letter-spacing="0.05em">78251</text>
+                <line x1="40" y1="60" x2="160" y2="60" stroke="#7d6a47" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quote" id="quote">
+      <div class="container">
+        <div class="quote-layout">
+          <div class="quote-intro">
+            <h2>Get a fence quote</h2>
+            <p>Fill out the form and we'll get back to you. Or call directly:</p>
+            <a href="tel:+12102605959" class="quote-phone">(210) 260-5959</a>
+          </div>
+          
+          <form class="quote-form" id="quoteForm">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              
+              <div class="form-field">
+                <label for="phone">Phone <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
             </div>
             
-            <div class="detail-block">
-              <h3>Hours</h3>
-              <table class="hours-table">
-                <tr><td>Mon–Fri</td><td>8:00 AM – 7:00 PM</td></tr>
-                <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
-                <tr><td>Sunday</td><td>Closed</td></tr>
-              </table>
-            </div>
-          </div>
-        </div>
-        
-        <div class="area-map">
-          <div class="map-placeholder">
-            <svg viewBox="0 0 400 300" fill="none">
-              <rect width="400" height="300" fill="#d4d1ca"/>
-              <circle cx="200" cy="150" r="8" fill="#aa9269"/>
-              <text x="200" y="180" text-anchor="middle" font-family="var(--font-body)" font-size="14" fill="#303220">San Antonio, TX</text>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quote Form -->
-  <section class="section quote" id="quote">
-    <div class="container">
-      <div class="quote-layout">
-        <div class="quote-intro">
-          <h2>Get a fence quote</h2>
-          <p>Fill out the form and we'll get back to you. Or call directly:</p>
-          <a href="tel:+12102605959" class="quote-phone">(210) 260-5959</a>
-        </div>
-        
-        <form class="quote-form" id="quoteForm">
-          <div class="form-row">
             <div class="form-field">
-              <label for="name">Name <span class="required">*</span></label>
-              <input type="text" id="name" name="name" required>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-row">
+              <div class="form-field">
+                <label for="fenceType">Fence Type</label>
+                <select id="fenceType" name="fenceType">
+                  <option value="">Select one</option>
+                  <option value="privacy">Privacy fence</option>
+                  <option value="gate">Gate only</option>
+                  <option value="staining">Fence staining</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-field">
+                <label for="footage">Approx. linear footage</label>
+                <input type="text" id="footage" name="footage" placeholder="e.g., 100 ft">
+              </div>
             </div>
             
             <div class="form-field">
-              <label for="phone">Phone <span class="required">*</span></label>
-              <input type="tel" id="phone" name="phone" required>
-            </div>
-          </div>
-          
-          <div class="form-field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-          </div>
-          
-          <div class="form-row">
-            <div class="form-field">
-              <label for="fenceType">Fence Type</label>
-              <select id="fenceType" name="fenceType">
-                <option value="">Select one</option>
-                <option value="privacy">Privacy fence</option>
-                <option value="gate">Gate only</option>
-                <option value="repair">Fence repair</option>
-                <option value="staining">Fence staining</option>
-                <option value="other">Other</option>
-              </select>
+              <label for="address">Address or neighborhood</label>
+              <input type="text" id="address" name="address">
             </div>
             
             <div class="form-field">
-              <label for="footage">Approx. linear footage</label>
-              <input type="text" id="footage" name="footage" placeholder="e.g., 100 ft">
+              <label for="notes">Project notes</label>
+              <textarea id="notes" name="notes" rows="4"></textarea>
             </div>
-          </div>
-          
-          <div class="form-field">
-            <label for="address">Address or neighborhood</label>
-            <input type="text" id="address" name="address">
-          </div>
-          
-          <div class="form-field">
-            <label for="notes">Project notes</label>
-            <textarea id="notes" name="notes" rows="4"></textarea>
-          </div>
-          
-          <button type="submit" class="btn btn-primary btn-large">Send quote request</button>
-          
-          <div class="form-message" id="formMessage"></div>
-          
-          <noscript>
-            <p class="form-noscript">This form requires JavaScript. Please call (210) 260-5959 to request a quote.</p>
-          </noscript>
-        </form>
+            
+            <button type="submit" class="btn btn-primary btn-large">Send quote request</button>
+            
+            <div class="form-message" id="formMessage"></div>
+            
+            <noscript>
+              <p class="form-noscript">This form requires JavaScript. Please call (210) 260-5959 to request a quote.</p>
+            </noscript>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -341,21 +380,21 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
         </div>
         
         <div class="footer-contact">
-          <h4>Contact</h4>
+          <h3>Contact</h3>
           <p><a href="tel:+12102605959">(210) 260-5959</a></p>
           <p><a href="mailto:dylansfencing@gmail.com">dylansfencing@gmail.com</a></p>
           <p>9626 Wolf Point<br>San Antonio, TX 78251</p>
         </div>
         
         <div class="footer-hours">
-          <h4>Hours</h4>
+          <h3>Hours</h3>
           <p>Mon–Fri: 8:00 AM – 7:00 PM<br>
              Saturday: 9:00 AM – 5:00 PM<br>
              Sunday: Closed</p>
         </div>
         
         <div class="footer-social">
-          <h4>Follow</h4>
+          <h3>Follow</h3>
           <p><a href="https://www.facebook.com/p/Dylans-Fencing-LLC-100093611084668/" target="_blank" rel="noopener">Facebook</a></p>
           <p><a href="https://nextdoor.com/pages/goff-fencing-san-antonio-tx/" target="_blank" rel="noopener">Nextdoor</a></p>
         </div>
@@ -368,7 +407,6 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
   </footer>
 
   <style>
-    /* Demo Bar */
     .demo-bar {
       background: #303220;
       color: #F4F1EA;
@@ -378,17 +416,22 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
     }
     
     .demo-bar a {
-      color: #aa9269;
+      color: var(--color-cedar-light);
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-underline-offset: 2px;
     }
     
     .demo-bar a:hover {
-      color: #c5ab84;
+      color: #d4c49a;
+    }
+    
+    @media (max-width: 500px) {
+      .demo-bar-full {
+        display: none;
+      }
     }
 
-    /* Header */
     .header {
       background: #F4F1EA;
       padding: 1rem 0;
@@ -447,13 +490,13 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
     
     .nav-cta {
       padding: 0.5rem 1rem;
-      background: var(--color-cedar);
+      background: var(--color-cedar-dark);
       color: white;
       border-radius: 2px;
     }
     
     .nav-cta:hover {
-      background: #9a8259;
+      background: #6d5a37;
       color: white;
     }
     
@@ -478,6 +521,7 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
       background: none;
       padding: 0.5rem;
       border: none;
+      z-index: 101;
     }
     
     .nav-toggle span {
@@ -491,16 +535,45 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
     @media (min-width: 768px) {
       .nav {
         display: flex;
+        align-items: center;
       }
       
       .nav-toggle {
         display: none;
       }
     }
+    
+    @media (max-width: 767px) {
+      .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #F4F1EA;
+        border-bottom: 1px solid rgba(48, 50, 32, 0.1);
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      
+      .nav a {
+        padding: 1rem 1.5rem;
+        width: 100%;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(48, 50, 32, 0.05);
+      }
+      
+      .nav-cta {
+        background: transparent;
+        color: var(--color-dark);
+        border-radius: 0;
+      }
+    }
 
-    /* Hero */
     .hero {
-      padding: 3rem 0;
+      padding: 2rem 0 0;
     }
     
     .hero .container {
@@ -541,12 +614,12 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
     }
     
     .btn-primary {
-      background: var(--color-cedar);
+      background: var(--color-cedar-dark);
       color: white;
     }
     
     .btn-primary:hover {
-      background: #9a8259;
+      background: #6d5a37;
     }
     
     .btn-secondary {
@@ -579,34 +652,73 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
     
     .hero-image {
       position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border-radius: 2px;
     }
     
     .hero-image img {
       width: 100%;
-      height: auto;
-      border-radius: 2px;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+    }
+    
+    .hero-divider {
+      margin-top: 2rem;
+      padding: 1.5rem 0;
+    }
+    
+    .picket-line {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    
+    .picket-line span {
+      width: 2px;
+      height: 32px;
+      background: var(--color-charcoal);
+      opacity: 0.3;
     }
     
     @media (min-width: 768px) {
       .hero {
-        padding: 4rem 0;
+        padding: 3rem 0 0;
       }
       
       .hero .container {
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
       }
+      
+      .hero-image {
+        aspect-ratio: 4 / 3;
+      }
     }
     
     @media (min-width: 1024px) {
       .hero {
-        padding: 6rem 0;
+        padding: 4rem 0 0;
       }
     }
 
-    /* Services */
     .services {
       background: white;
+      padding: 2.5rem 0;
+    }
+    
+    .services h2 {
+      margin-bottom: 0.75rem;
+    }
+    
+    .services-intro {
+      font-size: 1.125rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
     }
     
     .services-grid {
@@ -625,9 +737,15 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
     
     .service-featured {
       background: #fafaf8;
-      padding: 2rem;
+      padding: 0;
       border: none;
       border-left: 4px solid var(--color-dark);
+      display: grid;
+      gap: 1.5rem;
+    }
+    
+    .service-content {
+      padding: 2rem;
     }
     
     .service-icon {
@@ -635,17 +753,37 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
       margin-bottom: 1rem;
     }
     
+    .service-image {
+      overflow: hidden;
+      border-radius: 0 0 2px 2px;
+    }
+    
+    .service-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
     @media (min-width: 768px) {
+      .services {
+        padding: 3.5rem 0;
+      }
+      
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
       
       .service-featured {
         grid-column: 1 / -1;
+        grid-template-columns: 1fr 300px;
       }
     }
     
     @media (min-width: 1024px) {
+      .services {
+        padding: 4.5rem 0;
+      }
+      
       .services-grid {
         grid-template-columns: 2fr 1fr 1fr;
       }
@@ -653,10 +791,11 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
       .service-featured {
         grid-column: 1;
         grid-row: 1 / 3;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
       }
     }
 
-    /* Projects Gallery */
     .projects h2 {
       margin-bottom: 2rem;
     }
@@ -664,47 +803,66 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
     .gallery {
       display: grid;
       gap: 1rem;
+      grid-template-columns: repeat(12, 1fr);
     }
     
     .gallery-item {
       position: relative;
-      overflow: hidden;
       border-radius: 2px;
+      overflow: hidden;
     }
     
     .gallery-item img {
       width: 100%;
-      height: 100%;
+      height: 250px;
       object-fit: cover;
     }
     
-    .gallery-caption {
-      margin-top: 0.5rem;
+    .gallery-item figcaption {
+      padding: 0.75rem;
       font-size: 0.875rem;
       color: var(--color-text-muted);
+      background: #fafaf8;
+    }
+    
+    .gallery-item {
+      grid-column: span 12;
     }
     
     @media (min-width: 768px) {
-      .gallery {
-        grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 200px;
+      .gallery-large {
+        grid-column: span 7;
+        grid-row: span 2;
       }
       
-      .gallery-large {
-        grid-column: span 2;
-        grid-row: span 2;
+      .gallery-large img {
+        height: 100%;
+        min-height: 400px;
       }
       
       .gallery-portrait {
+        grid-column: span 5;
         grid-row: span 2;
       }
       
+      .gallery-portrait img {
+        height: 100%;
+        min-height: 400px;
+      }
+      
+      .gallery-item:not(.gallery-large):not(.gallery-portrait):not(.gallery-small) {
+        grid-column: span 6;
+      }
+      
       .gallery-small {
-        grid-row: span 1;
+        grid-column: span 6;
+      }
+      
+      .gallery-small img {
+        height: 200px;
       }
     }
 
-    /* Process */
     .process {
       background: #fafaf8;
     }
@@ -735,8 +893,8 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
       font-family: var(--font-display);
       font-size: 1.5rem;
       font-weight: 700;
-      color: var(--color-cedar);
-      border: 2px solid var(--color-cedar);
+      color: var(--color-cedar-dark);
+      border: 2px solid var(--color-cedar-dark);
       border-radius: 2px;
     }
     
@@ -757,7 +915,6 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
       }
     }
 
-    /* Service Area */
     .area-grid {
       display: grid;
       gap: 3rem;
@@ -781,7 +938,8 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
     .detail-block h3 {
       font-size: 1rem;
       margin-bottom: 0.75rem;
-      color: var(--color-charcoal);
+      color: var(--color-dark);
+      font-weight: 600;
     }
     
     .hours-table {
@@ -794,17 +952,20 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
       color: var(--color-text-muted);
     }
     
-    .map-placeholder {
+    .location-badge {
       background: #e8e6e0;
       border-radius: 2px;
       overflow: hidden;
-      min-height: 300px;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
-    .map-placeholder svg {
+    .location-badge svg {
       width: 100%;
-      height: 100%;
-      min-height: 300px;
+      max-width: 300px;
+      height: auto;
     }
     
     @media (min-width: 768px) {
@@ -818,7 +979,6 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
       }
     }
 
-    /* Quote Form */
     .quote {
       background: white;
     }
@@ -870,7 +1030,7 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
     }
     
     .required {
-      color: var(--color-cedar);
+      color: var(--color-cedar-dark);
     }
     
     .form-field input,
@@ -933,7 +1093,6 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
       }
     }
 
-    /* Footer */
     .footer {
       background: var(--color-dark);
       color: #F4F1EA;
@@ -964,13 +1123,13 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
       color: #a0a28a;
     }
     
-    .footer h4 {
+    .footer h3 {
       font-family: var(--font-display);
       font-size: 0.875rem;
       font-weight: 600;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: var(--color-cedar);
+      color: var(--color-cedar-light);
       margin-bottom: 0.75rem;
     }
     
@@ -1016,7 +1175,6 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
   </style>
 
   <script>
-    // Form handler
     const form = document.getElementById('quoteForm');
     const formMessage = document.getElementById('formMessage');
     
@@ -1035,13 +1193,21 @@ import fenceBrick from '../assets/images/fence-brick-house.jpg';
       });
     }
     
-    // Mobile nav toggle (simple implementation)
     const navToggle = document.getElementById('nav-toggle');
     const nav = document.getElementById('nav');
     
     if (navToggle && nav) {
       navToggle.addEventListener('click', () => {
-        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+        nav.style.display = isExpanded ? 'none' : 'flex';
+      });
+      
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.style.display = 'none';
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
       });
     }
   </script>
